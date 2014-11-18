@@ -1,0 +1,22 @@
+{
+  "name": "reactive-data",
+  "main": "dist/reactive-data.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/brianshaler/reactive-data",
+  "authors": [
+    "Brian Shaler <brian@shaler.name>"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
