@@ -16,6 +16,8 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "gulpfile.coffee",
+    "src",
     "test",
     "tests"
   ]
