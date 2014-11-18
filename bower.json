@@ -1,7 +1,7 @@
 {
   "name": "reactive-data",
   "main": "dist/reactive-data.js",
-  "version": "0.0.0b",
+  "version": "0.0.1",
   "homepage": "https://github.com/brianshaler/reactive-data",
   "authors": [
     "Brian Shaler <brian@shaler.name>"
