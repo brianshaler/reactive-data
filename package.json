@@ -21,6 +21,10 @@
     "mocha": "^1.21.5",
     "should": "^4.0.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brianshaler/reactive-data.git"
+  },
   "scripts": {
     "test": "mocha test/*.coffee test/*/*.coffee --require coffee-script/register --reporter spec",
     "prepublish": "gulp dist"
