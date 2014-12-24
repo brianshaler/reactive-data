@@ -4,9 +4,9 @@ Repository = require './Repository'
 Item = ->
   @value = null unless @value?
   @save = (value) =>
-    Repository.update @key, value
+    @Repository.update @key, value
   @start = =>
-    @stop = Repository.subscribe @key, (value) =>
+    @stop = @Repository.subscribe @key, (value) =>
       @value = value
       @update value
   @

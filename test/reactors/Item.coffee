@@ -64,3 +64,24 @@ describe 'reactors/Item', ->
     item2.value.stuff.should.equal 'things'
     item1.stop()
     item2.stop()
+
+  it 'should support isolated Repository instances', ->
+    r1 = Repository.generateRepository()
+    r2 = Repository.generateRepository()
+    key = 'key5'
+    item1 = Item
+      key: key
+      Repository: r1
+    item1.start()
+    item2 = Item
+      key: key
+      Repository: r2
+    item2.start()
+    item1.save
+      stuff: 'things1'
+    item2.save
+      stuff: 'things2'
+    item1.value.stuff.should.equal 'things1'
+    item2.value.stuff.should.equal 'things2'
+    item1.stop()
+    item2.stop()

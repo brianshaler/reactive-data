@@ -7,7 +7,7 @@ update = require './update'
 
 module.exports = (options) ->
   reactor =
-    Repository: Repository
+    Repository: options?.Repository ? Repository
     components: []
     listen: ->
       listen.apply reactor, arguments

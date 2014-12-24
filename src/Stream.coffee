@@ -11,9 +11,9 @@ Stream = (individual = true) ->
         @items.push item
     @update @items
   fn = if individual
-    Repository.onItem
+    @Repository.onItem
   else
-    Repository.onItems
+    @Repository.onItems
   @start = =>
     @stop = fn @filter, onItem
   @

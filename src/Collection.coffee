@@ -13,7 +13,7 @@ getId = (item, identifier) ->
 Collection = ->
   @items = []
   @start = =>
-    @stop = Repository.onItems @filter, (objs) =>
+    @stop = @Repository.onItems @filter, (objs) =>
       updated = false
       if @identifier
         toRemove = []
@@ -27,7 +27,7 @@ Collection = ->
             #_.remove objs, newItem
             toRemove.push newItem
             #@items[updateIndex] = Item key: newItemId
-            Repository.update newItemId, newItem
+            @Repository.update newItemId, newItem
         for newItem in toRemove
           _.remove objs, newItem
       else
@@ -42,7 +42,7 @@ Collection = ->
         item.listen {}
         @items.push item
         #@items.push obj
-        Repository.update objId, obj
+        @Repository.update objId, obj
       return if objs.length == 0 and !updated
       @update @items
   @

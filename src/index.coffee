@@ -14,3 +14,4 @@ module.exports =
   pushItems: Repository.pushItems
   onItem: Repository.onItem
   onItems: Repository.onItems
+  generateRepository: Repository.generateRepository
